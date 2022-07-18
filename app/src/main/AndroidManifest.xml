@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgrammingPractiseWk5b">
         <activity
+            android:name=".BrunoMars"
+            android:exported="false" />
+        <activity
+            android:name=".EdSheeran"
+            android:exported="false" />
+        <activity
+            android:name=".JustinBieber"
+            android:exported="false" />
+        <activity
             android:name=".PlaySongActivity"
             android:exported="false" />
         <activity
