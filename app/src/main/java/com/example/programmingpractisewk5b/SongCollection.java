@@ -24,7 +24,7 @@ public class SongCollection {
 
     }
 
-    public int searchSongById(String id) {
+    public static int searchSongById(String id) {
         for (int index = 0; index < songs.length; index++) {
             Song tempSong = songs[index];
             if (tempSong.getId().equals(id)) {

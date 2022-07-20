@@ -39,8 +39,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
         android:text="Just The Way You Are"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1007"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -51,7 +52,7 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="21dp"
         android:text="Bruno Mars"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/S1007"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle7" />
@@ -74,8 +75,9 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="68dp"
         android:text="The Lazy Song"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1008"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist7" />
 
@@ -86,7 +88,7 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="156dp"
         android:text="Bruno Mars"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/S1007"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle7" />
@@ -109,8 +111,9 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="56dp"
         android:text="That's What I Like"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1009"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist8" />
 
@@ -121,7 +124,7 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="18dp"
         android:text="Bruno Mars"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/S1009"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle9" />

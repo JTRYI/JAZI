@@ -39,8 +39,9 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="48dp"
         android:text="STAY"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1001"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -51,7 +52,7 @@
         android:layout_marginStart="27dp"
         android:layout_marginTop="20dp"
         android:text="Justin Bieber , The Kid LAROI"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/S1001"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle1" />
 
@@ -73,8 +74,9 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="64dp"
         android:text="Sorry"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1002"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist1" />
 
@@ -85,7 +87,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="16dp"
         android:text="Justin Bieber"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/S1002"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
 
@@ -107,8 +109,9 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="66dp"
         android:text="Baby"
-        android:textColor="#FF5722"
+        android:textColor="#FF9800"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/S1003"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist2" />
 
@@ -119,7 +122,64 @@
         android:layout_marginStart="42dp"
         android:layout_marginTop="15dp"
         android:text="Justin Bieber ft Ludacris"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/S1003"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle3" />
+
+    <ImageView
+        android:id="@+id/add1"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="S1001"
+        android:onClick="addToFavourites"
+        app:layout_constraintBottom_toBottomOf="@+id/S1001"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1001"
+        app:layout_constraintVertical_bias="0.367"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
+    <ImageView
+        android:id="@+id/add2"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="S1002"
+        android:onClick="addToFavourites"
+        app:layout_constraintBottom_toBottomOf="@+id/S1002"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1002"
+        app:layout_constraintVertical_bias="0.367"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
+    <ImageView
+        android:id="@+id/add3"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="S1003"
+        android:onClick="addToFavourites"
+        app:layout_constraintBottom_toBottomOf="@+id/S1003"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1003"
+        app:layout_constraintVertical_bias="0.367"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#FF5722"
+        android:text="View Playlist"
+        android:onClick="gotoFavouriteActivity"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
