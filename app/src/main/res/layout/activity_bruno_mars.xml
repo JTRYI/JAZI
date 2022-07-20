@@ -20,4 +20,110 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/S1007"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/just_the_way_u_are_bruno_mars" />
+
+    <TextView
+        android:id="@+id/txtTitle7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Just The Way You Are"
+        android:textColor="#FF5722"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/S1007"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/txtArtist7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="21dp"
+        android:text="Bruno Mars"
+        android:textColor="#FF9800"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/S1007"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle7" />
+
+    <ImageView
+        android:id="@+id/S1008"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1007"
+        app:srcCompat="@drawable/the_lazy_song_bruno_mars" />
+
+    <TextView
+        android:id="@+id/txtTitle8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:text="The Lazy Song"
+        android:textColor="#FF5722"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/S1008"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist7" />
+
+    <TextView
+        android:id="@+id/txtArtist8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="156dp"
+        android:text="Bruno Mars"
+        android:textColor="#FF9800"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/S1007"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle7" />
+
+    <ImageView
+        android:id="@+id/S1009"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1008"
+        app:srcCompat="@drawable/thats_what_i_like_bruno_mars" />
+
+    <TextView
+        android:id="@+id/txtTitle9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="56dp"
+        android:text="That's What I Like"
+        android:textColor="#FF5722"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/S1009"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist8" />
+
+    <TextView
+        android:id="@+id/txtArtist9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="18dp"
+        android:text="Bruno Mars"
+        android:textColor="#FF9800"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/S1009"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle9" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
