@@ -29,9 +29,14 @@ public class SongCollection {
             Song tempSong = songs[index];
             if (tempSong.getId().equals(id)) {
                 return index;
+
             }
         }
         return -1;
+    }
+
+    public static Song returnSongById(int id){
+        return songs[id];
     }
 
     public Song getCurrentSong(int currentSongId) {

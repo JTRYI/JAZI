@@ -2,16 +2,18 @@ package com.example.programmingpractisewk5b;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class JustinBieber extends AppCompatActivity {
 
     SongCollection songCollection = new SongCollection();
-    ArrayList<Song> favList = new ArrayList<Song>();
+    static ArrayList<Song> favList = new ArrayList<Song>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,15 +24,17 @@ public class JustinBieber extends AppCompatActivity {
     public void addToFavourites(View view) {
 
         String songID = view.getContentDescription().toString();
-        Song song = songCollection.searchSongById(songID);
+        int selectedId = songCollection.searchSongById(songID);
+        Song song= songCollection.returnSongById(selectedId);
         favList.add(song);
         //Toast.makeText(this,"button is clicked", Toast.LENGTH_SHORT).show();
+
     }
 
     public void gotoFavouriteActivity(View view) {
 
-        for (int i = 0; i < favList.size() ; i++) {
-            Log.d("temasek", favList.get(i).getTitle());
+        Intent intent = new Intent(this,MyFavouritesPlaylist.class);
+        startActivity(intent);
+
         }
     }
-}
