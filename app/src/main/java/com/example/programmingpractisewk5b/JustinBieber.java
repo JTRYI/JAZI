@@ -25,16 +25,10 @@ public class JustinBieber extends AppCompatActivity {
 
         String songID = view.getContentDescription().toString();
         int selectedId = songCollection.searchSongById(songID);
-        Song song= songCollection.returnSongById(selectedId);
+        Song song = songCollection.returnSongById(selectedId);
         favList.add(song);
-        //Toast.makeText(this,"button is clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Song has been added to playlist", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void gotoFavouriteActivity(View view) {
-
-        Intent intent = new Intent(this,MyFavouritesPlaylist.class);
-        startActivity(intent);
-
-        }
-    }
+}

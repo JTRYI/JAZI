@@ -128,4 +128,43 @@
         app:layout_constraintStart_toEndOf="@+id/S1006"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle6" />
 
+    <ImageView
+        android:id="@+id/add4"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="S1004"
+        app:layout_constraintBottom_toBottomOf="@+id/S1004"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1004"
+        app:layout_constraintVertical_bias="0.591"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
+    <ImageView
+        android:id="@+id/add5"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="S1005"
+        app:layout_constraintBottom_toBottomOf="@+id/S1005"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1005"
+        app:layout_constraintVertical_bias="0.408"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
+    <ImageView
+        android:id="@+id/add6"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="S1006"
+        app:layout_constraintBottom_toBottomOf="@+id/S1006"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/S1006"
+        app:layout_constraintVertical_bias="0.387"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#FF5722" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

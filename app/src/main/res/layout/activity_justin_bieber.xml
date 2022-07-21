@@ -130,7 +130,7 @@
         android:id="@+id/add1"
         android:layout_width="40dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="S1001"
         android:onClick="addToFavourites"
         app:layout_constraintBottom_toBottomOf="@+id/S1001"
@@ -144,7 +144,7 @@
         android:id="@+id/add2"
         android:layout_width="40dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="S1002"
         android:onClick="addToFavourites"
         app:layout_constraintBottom_toBottomOf="@+id/S1002"
@@ -158,7 +158,7 @@
         android:id="@+id/add3"
         android:layout_width="40dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="S1003"
         android:onClick="addToFavourites"
         app:layout_constraintBottom_toBottomOf="@+id/S1003"
@@ -168,18 +168,4 @@
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#FF5722" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="#FF5722"
-        android:text="View Playlist"
-        android:onClick="gotoFavouriteActivity"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:iconTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
