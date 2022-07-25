@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class PlaySongActivity extends AppCompatActivity {
 
@@ -24,6 +29,16 @@ public class PlaySongActivity extends AppCompatActivity {
     private MediaPlayer player = new MediaPlayer();
     private Button btnPlayPause = null;
     private SongCollection songCollection = new SongCollection();
+    private SongCollection originalSongCollection = new SongCollection();
+
+    List<Song> shuffleList = Arrays.asList(songCollection.songs);
+
+    SeekBar seekBar;
+    Handler handler = new Handler();
+    Button repeatBtn;
+    Button shuffleBtn;
+    Boolean repeatFlag = false;
+    Boolean shuffleFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +50,41 @@ public class PlaySongActivity extends AppCompatActivity {
         Log.d("temasek", "Retrieve position is" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);
+        seekBar = findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                if (player != null && player.isPlaying()) {
+                   player.seekTo(seekBar.getProgress());
+
+                }
+
+            }
+        });
+
+        repeatBtn = findViewById(R.id.repeatBtn);
+        shuffleBtn = findViewById(R.id.shuffleBtn);
     }
+
+    Runnable p_bar = new Runnable() {
+        @Override
+        public void run() {
+            if (player != null && player.isPlaying()) {
+                seekBar.setProgress(player.getCurrentPosition());
+            }
+            handler.postDelayed(this, 1000);
+        }
+    };
 
     public void playSong(String songUrl) {
         try {
@@ -60,6 +109,9 @@ public class PlaySongActivity extends AppCompatActivity {
 
         } else {
             player.start();
+            seekBar.setMax(player.getDuration());
+            handler.removeCallbacks(p_bar);
+            handler.postDelayed(p_bar,1000);
             btnPlayPause.setText("PAUSE");
         }
     }
@@ -68,10 +120,15 @@ public class PlaySongActivity extends AppCompatActivity {
         player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                Toast.makeText(getBaseContext(), "The song had ended and the onCompleteListener is activated\n" +
-                        "The button text is changed to 'PLAY'", Toast.LENGTH_LONG).show();
-                btnPlayPause.setText("PLAY");
+                if (repeatFlag) {
+                    playOrPauseMusic(null);
 
+                }else {
+                    //Toast.makeText(getBaseContext(), "The song had ended and the onCompleteListener is activated\n" +
+                            //"The button text is changed to 'PLAY'", Toast.LENGTH_LONG).show();
+                    btnPlayPause.setText("PLAY");
+
+                }
             }
         });
     }
@@ -106,5 +163,29 @@ public class PlaySongActivity extends AppCompatActivity {
         Log.d("temasek", "After playPrevious, the index is now:" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);
+    }
+
+    public void repeatSong(View view) {
+
+        if (repeatFlag) {
+            repeatBtn.setBackgroundResource(R.drawable.repeat_off);
+
+        } else {
+            repeatBtn.setBackgroundResource(R.drawable.repeat_on);
+        }
+        repeatFlag = !repeatFlag;
+    }
+    public void shuffleSong(View view) {
+
+        if (shuffleFlag) {
+            shuffleBtn.setBackgroundResource(R.drawable.shuffle_off);
+            songCollection = new SongCollection();
+
+        } else {
+            shuffleBtn.setBackgroundResource(R.drawable.shuffle_on);
+            Collections.shuffle(shuffleList);
+            shuffleList.toArray(songCollection.songs);
+        }
+        shuffleFlag = !shuffleFlag;
     }
 }

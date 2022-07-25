@@ -49,5 +49,20 @@ public class JustinBieber extends AppCompatActivity {
         Toast.makeText(this, song.getTitle() + " has been added to the playlist. ", Toast.LENGTH_SHORT).show();
 
     }
+    // temporary becuz playlist cant play song yet
+    public void sendDataToActivity(int index){
+        Intent intent = new Intent(this, PlaySongActivity.class);
+        intent.putExtra("index", index);
+        startActivity(intent);
+    }
+
+    public void handleSelection(View myView){
+        String resourceid = getResources(). getResourceName(myView.getId());
+        resourceid = resourceid.substring(resourceid.indexOf("/") + 1);
+        Log.d("temasek","The id of the pressed image button is : " + resourceid);
+        int currentArrayIndex = songCollection.searchSongById(resourceid);
+        Log.d("temasek" , "The index in the array for the song is :" + currentArrayIndex);
+        sendDataToActivity(currentArrayIndex);
+    }
 
 }

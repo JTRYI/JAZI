@@ -1,7 +1,7 @@
 package com.example.programmingpractisewk5b;
 
 public class SongCollection {
-    private static Song[] songs = new Song[9];
+    public static Song[] songs = new Song[9];
 
     public SongCollection() {
 

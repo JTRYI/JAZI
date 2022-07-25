@@ -53,21 +53,29 @@
         android:id="@+id/btnPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="141dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="188dp"
+        android:backgroundTint="#FF5722"
         android:onClick="playPrevious"
         android:text="PREV"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgCoverArt" />
 
     <Button
         android:id="@+id/btnPlayPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="37dp"
+        android:backgroundTint="#FF5722"
         android:onClick="playOrPauseMusic"
         android:text="PLAY"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
         app:layout_constraintStart_toEndOf="@+id/btnPrevious"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist" />
 
@@ -75,10 +83,47 @@
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="188dp"
+        android:backgroundTint="#FF5722"
         android:onClick="playNext"
         android:text="NEXT"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/btnPlayPause"
         app:layout_constraintTop_toBottomOf="@+id/imgCoverArt" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="282dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
+        android:progressTint="#FFFFFF"
+        android:thumbTint="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist" />
+
+    <Button
+        android:id="@+id/repeatBtn"
+        android:layout_width="28dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/repeat_off"
+        android:onClick="repeatSong"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="@+id/btnNext" />
+
+    <Button
+        android:id="@+id/shuffleBtn"
+        android:layout_width="28dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shuffle_off"
+        android:onClick="shuffleSong"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrevious"
+        app:layout_constraintStart_toStartOf="@+id/btnPrevious"
+        app:layout_constraintTop_toTopOf="@+id/repeatBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
