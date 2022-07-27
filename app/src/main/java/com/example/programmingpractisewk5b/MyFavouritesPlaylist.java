@@ -13,6 +13,7 @@ public class MyFavouritesPlaylist extends AppCompatActivity {
 RecyclerView favList;
 SongAdapter songAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

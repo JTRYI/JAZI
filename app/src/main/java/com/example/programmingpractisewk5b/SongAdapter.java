@@ -1,7 +1,8 @@
 package com.example.programmingpractisewk5b;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.icu.text.Transliterator;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+
 
 public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filterable {
     List<Song> songs;
@@ -39,8 +40,7 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyView holder, final int position) {
-
+    public void onBindViewHolder(@NonNull MyView holder, @SuppressLint("RecyclerView") int position) {
 
 
         // dk what is the error ask teacher
@@ -81,6 +81,8 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
                     for (int i = 0; i < songs.size(); i++) {
                         if (songs.get(i).getTitle().toLowerCase().contains(charString.toLowerCase())) {
                             filteredList.add(songs.get(i));
+                            // Log to check what is in filteredList
+                            Log.d("temasek", "Songs in list are" + songs.get(i));
 
                         }
                     }
@@ -93,10 +95,11 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
             }
 
             @Override
-            protected void publishResults(CharSequence constraint, FilterResults filterResults) {
+            protected void publishResults(CharSequence constraint, FilterResults results) {
 
-                songsFiltered = (List<Song>) filterResults.values;
+                songsFiltered = (List<Song>) results.values;
                 notifyDataSetChanged();
+
 
             }
         };
