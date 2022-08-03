@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.SearchView;
 
 public class MyFavouritesPlaylist extends AppCompatActivity {
-RecyclerView favList;
+
+    RecyclerView favList;
 SongAdapter songAdapter;
+SongCollection songCollection = new SongCollection();
 
 
     @Override
@@ -19,6 +22,7 @@ SongAdapter songAdapter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_favourites_playlist);
         favList = findViewById(R.id.recycleView);
+
 
 
         songAdapter = new SongAdapter(JustinBieber.favList);
@@ -40,4 +44,20 @@ SongAdapter songAdapter;
 
 
         }
+    public void sendDataToActivity(int index){
+        Intent intent = new Intent(this, PlaySongActivity.class);
+        intent.putExtra("index", index);
+        startActivity(intent);
+    }
+
+    public void handleSelection(View myView){
+        Log.d("temasek","my view id of the pressed image button is : " + myView.getId() );
+        String resourceid = getResources(). getResourceName(myView.getId());
+        Log.d("temasek","my resource id  of the pressed image button is : " + resourceid );
+        resourceid = resourceid.substring(resourceid.indexOf("/") + 1);
+        Log.d("temasek","The id of the pressed image button is : " + resourceid);
+        int currentArrayIndex = songCollection.searchSongById(resourceid);
+        Log.d("temasek" , "The index in the array for the song is :" + currentArrayIndex);
+        sendDataToActivity(currentArrayIndex);
+    }
 }

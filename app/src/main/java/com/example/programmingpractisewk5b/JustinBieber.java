@@ -49,7 +49,7 @@ public class JustinBieber extends AppCompatActivity {
         Toast.makeText(this, song.getTitle() + " has been added to the playlist. ", Toast.LENGTH_SHORT).show();
 
     }
-    // temporary becuz playlist cant play song yet
+
     public void sendDataToActivity(int index){
         Intent intent = new Intent(this, PlaySongActivity.class);
         intent.putExtra("index", index);

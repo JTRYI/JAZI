@@ -2,6 +2,7 @@ package com.example.programmingpractisewk5b;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,9 +24,12 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
     List<Song> songsFiltered;
     Context context;
 
+
+
     public SongAdapter(List<Song> songs) {
         this.songs = songs;
         this.songsFiltered = songs;
+
     }
 
 
@@ -39,11 +43,11 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
         return viewHolder;
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull MyView holder, @SuppressLint("RecyclerView") int position) {
 
 
-        // dk what is the error ask teacher
         Song song = songs.get(position);
         TextView artist = holder.titleArtist;
         artist.setText(song.getArtist());
@@ -59,7 +63,9 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
             }
         });
 
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -104,4 +110,7 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
             }
         };
     }
-}
+
+
+    }
+
