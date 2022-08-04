@@ -13,7 +13,11 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -31,6 +35,7 @@ public class PlaySongActivity extends AppCompatActivity {
     private SongCollection songCollection = new SongCollection();
     private SongCollection originalSongCollection = new SongCollection();
 
+    ArrayList<Song> songlist = new ArrayList<Song>();
     List<Song> shuffleList = Arrays.asList(songCollection.songs);
 
     SeekBar seekBar;
@@ -40,13 +45,21 @@ public class PlaySongActivity extends AppCompatActivity {
     Boolean repeatFlag = false;
     Boolean shuffleFlag = false;
 
+    Song song;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_song);
         btnPlayPause = findViewById(R.id.btnPlayPause);
+        //getting data from other activities
         Bundle songData = this.getIntent().getExtras();
         currentIndex = songData.getInt("index");
+        //Creating GSON Object
+        Gson gson = new Gson();
+        //Converting String Data into an arraylist
+        TypeToken<ArrayList<Song>> token = new TypeToken<ArrayList<Song>>(){};
+        songlist = gson.fromJson(songData.getString("songs"),token.getType());
         Log.d("temasek", "Retrieve position is" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);
@@ -135,6 +148,7 @@ public class PlaySongActivity extends AppCompatActivity {
 
     public void displaySongBasedOnIndex(int currentIndex) {
         Song song = songCollection.getCurrentSong(currentIndex);
+//        song = songlist.get(currentIndex);
         title = song.getTitle();
         artist = song.getArtist();
         filelink = song.getFileLink();
