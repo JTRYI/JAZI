@@ -27,7 +27,6 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
     Context context;
 
 
-
     public SongAdapter(List<Song> songs) {
         this.songs = songs;
         this.songsFiltered = songs;

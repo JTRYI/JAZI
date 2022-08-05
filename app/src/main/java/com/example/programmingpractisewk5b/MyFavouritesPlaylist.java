@@ -44,20 +44,5 @@ SongCollection songCollection = new SongCollection();
 
 
         }
-    public void sendDataToActivity(int index){
-        Intent intent = new Intent(this, PlaySongActivity.class);
-        intent.putExtra("index", index);
-        startActivity(intent);
-    }
 
-    public void handleSelection(View myView){
-        Log.d("temasek","my view id of the pressed image button is : " + myView.getId() );
-        String resourceid = getResources(). getResourceName(myView.getId());
-        Log.d("temasek","my resource id  of the pressed image button is : " + resourceid );
-        resourceid = resourceid.substring(resourceid.indexOf("/") + 1);
-        Log.d("temasek","The id of the pressed image button is : " + resourceid);
-        int currentArrayIndex = songCollection.searchSongById(resourceid);
-        Log.d("temasek" , "The index in the array for the song is :" + currentArrayIndex);
-        sendDataToActivity(currentArrayIndex);
-    }
 }
