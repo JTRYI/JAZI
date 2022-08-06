@@ -35,6 +35,7 @@ public class PlaySongActivity extends AppCompatActivity {
     private SongCollection songCollection = new SongCollection();
     private SongCollection originalSongCollection = new SongCollection();
 
+
     ArrayList<Song> songlist = new ArrayList<Song>();
     List<Song> shuffleList = Arrays.asList(songCollection.songs);
 
@@ -148,7 +149,6 @@ public class PlaySongActivity extends AppCompatActivity {
 
     public void displaySongBasedOnIndex(int currentIndex) {
         Song song = songCollection.getCurrentSong(currentIndex);
-//        song = songlist.get(currentIndex);
         title = song.getTitle();
         artist = song.getArtist();
         filelink = song.getFileLink();
@@ -163,8 +163,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
     public void playNext(View view) {
         currentIndex = songCollection.getNextSong(currentIndex);
-        Toast.makeText(this, "After clicking playNext,\nthe current index of this song\n" +
-                "in the SongCollection array is now :" + currentIndex, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "After clicking playNext,\nthe current index of this song\n" +
+        //        "in the SongCollection array is now :" + currentIndex, Toast.LENGTH_LONG).show();
         Log.d("temasek", "After playNext, the index is now: " + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);
@@ -172,8 +172,8 @@ public class PlaySongActivity extends AppCompatActivity {
 
     public void playPrevious(View view) {
         currentIndex = songCollection.getPrevSong(currentIndex);
-        Toast.makeText(this, "After clicking playPrevious,\nthe current index of this song\n" +
-                "in the SongCollection array is now :" + currentIndex, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "After clicking playPrevious,\nthe current index of this song\n" +
+        //        "in the SongCollection array is now :" + currentIndex, Toast.LENGTH_LONG).show();
         Log.d("temasek", "After playPrevious, the index is now:" + currentIndex);
         displaySongBasedOnIndex(currentIndex);
         playSong(filelink);

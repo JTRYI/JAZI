@@ -73,15 +73,16 @@ public class firstFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         ImageView imageView1 = (ImageView) context.findViewById(R.id.topArtist1);
         ImageView imageView2 = (ImageView) context.findViewById(R.id.topArtist2);
         ImageView imageView3 = (ImageView) context.findViewById(R.id.topArtist3);
+        ImageView imageView4 = (ImageView) context.findViewById(R.id.gotolibrary);
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (context,JustinBieber.class);
+                Intent intent = new Intent(context, JustinBieber.class);
                 startActivity(intent);
             }
         });
@@ -89,7 +90,7 @@ public class firstFragment extends Fragment {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (context,EdSheeran.class);
+                Intent intent = new Intent(context, EdSheeran.class);
                 startActivity(intent);
             }
         });
@@ -97,10 +98,19 @@ public class firstFragment extends Fragment {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (context,BrunoMars.class);
+                Intent intent = new Intent(context, BrunoMars.class);
                 startActivity(intent);
             }
         });
 
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Library.class);
+                startActivity(intent);
+
+            }
+        }) ;
+
+        }
     }
-}

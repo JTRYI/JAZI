@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/S1001"
+        android:id="@+id/S1"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="28dp"
@@ -42,7 +42,7 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/S1001"
+        app:layout_constraintStart_toEndOf="@+id/S1"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
@@ -53,18 +53,18 @@
         android:layout_marginTop="20dp"
         android:text="Justin Bieber , The Kid LAROI"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/S1001"
+        app:layout_constraintStart_toEndOf="@+id/S1"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle1" />
 
     <ImageView
-        android:id="@+id/S1002"
+        android:id="@+id/S2"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="36dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1001"
+        app:layout_constraintTop_toBottomOf="@+id/S1"
         app:srcCompat="@drawable/sorry_justin_bieber" />
 
     <TextView
@@ -77,7 +77,7 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/S1002"
+        app:layout_constraintStart_toEndOf="@+id/S2"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist1" />
 
     <TextView
@@ -88,18 +88,18 @@
         android:layout_marginTop="16dp"
         android:text="Justin Bieber"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/S1002"
+        app:layout_constraintStart_toEndOf="@+id/S2"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
 
     <ImageView
-        android:id="@+id/S1003"
+        android:id="@+id/S3"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="36dp"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S1002"
+        app:layout_constraintTop_toBottomOf="@+id/S2"
         app:srcCompat="@drawable/baby_justin_bieber" />
 
     <TextView
@@ -112,7 +112,7 @@
         android:textColor="#FF9800"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/S1003"
+        app:layout_constraintStart_toEndOf="@+id/S3"
         app:layout_constraintTop_toBottomOf="@+id/txtArtist2" />
 
     <TextView
@@ -123,7 +123,7 @@
         android:layout_marginTop="15dp"
         android:text="Justin Bieber ft Ludacris"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/S1003"
+        app:layout_constraintStart_toEndOf="@+id/S3"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle3" />
 
     <ImageView
@@ -133,9 +133,9 @@
         android:layout_marginEnd="12dp"
         android:contentDescription="S1001"
         android:onClick="addToFavourites"
-        app:layout_constraintBottom_toBottomOf="@+id/S1001"
+        app:layout_constraintBottom_toBottomOf="@+id/S1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/S1001"
+        app:layout_constraintTop_toTopOf="@+id/S1"
         app:layout_constraintVertical_bias="0.367"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#FF5722" />
@@ -147,9 +147,9 @@
         android:layout_marginEnd="12dp"
         android:contentDescription="S1002"
         android:onClick="addToFavourites"
-        app:layout_constraintBottom_toBottomOf="@+id/S1002"
+        app:layout_constraintBottom_toBottomOf="@+id/S2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/S1002"
+        app:layout_constraintTop_toTopOf="@+id/S2"
         app:layout_constraintVertical_bias="0.367"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#FF5722" />
@@ -161,9 +161,9 @@
         android:layout_marginEnd="12dp"
         android:contentDescription="S1003"
         android:onClick="addToFavourites"
-        app:layout_constraintBottom_toBottomOf="@+id/S1003"
+        app:layout_constraintBottom_toBottomOf="@+id/S3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/S1003"
+        app:layout_constraintTop_toTopOf="@+id/S3"
         app:layout_constraintVertical_bias="0.367"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#FF5722" />

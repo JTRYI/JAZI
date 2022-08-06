@@ -16,22 +16,23 @@ import java.util.ArrayList;
 public class JustinBieber extends AppCompatActivity {
 
     SongCollection songCollection = new SongCollection();
+    //creating an arraylist called favList to add songs into this array list
     static ArrayList<Song> favList = new ArrayList<Song>();
-    SharedPreferences sharedPreferences;
+    //SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_justin_bieber);
         // name "playList" is stored in phone
-        sharedPreferences = getSharedPreferences("playList", MODE_PRIVATE);
-        String albums = sharedPreferences.getString("list","");
-        if (!albums.equals("")) {
-            TypeToken<ArrayList<Song>> token = new TypeToken<ArrayList<Song>>(){};
-            Gson gson = new Gson();
-            favList = gson.fromJson(albums,token.getType());
+        //sharedPreferences = getSharedPreferences("playList", MODE_PRIVATE);
+        //String albums = sharedPreferences.getString("list","");
+        //if (!albums.equals("")) {
+        //    TypeToken<ArrayList<Song>> token = new TypeToken<ArrayList<Song>>(){};
+        //    Gson gson = new Gson();
+        //    favList = gson.fromJson(albums,token.getType());
 
-        }
+        //}
     }
 
     public void addToFavourites(View view) {
@@ -41,14 +42,14 @@ public class JustinBieber extends AppCompatActivity {
         Song song = songCollection.returnSongById(selectedId);
         favList.add(song);
         //for persistent playlist
-        Gson gson = new Gson();
+        //Gson gson = new Gson();
         // use gson to convert whatever is inside favList to a string
         //json contains string representation for favList
-        String json = gson.toJson(favList);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("list",json);
-        editor.apply();
-        Log.d("gson", json);
+        //String json = gson.toJson(favList);
+        //SharedPreferences.Editor editor = sharedPreferences.edit();
+        //editor.putString("list",json);
+        //editor.apply();
+        //Log.d("gson", json);
         Toast.makeText(this, song.getTitle() + " has been added to the playlist. ", Toast.LENGTH_SHORT).show();
 
     }

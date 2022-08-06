@@ -15,15 +15,15 @@ public class SongCollection {
         Song Sorry = new Song("S1002",
                 "Sorry",
                 "Justin Bieber",
-                "https://drive.google.com/file/d/1OkQzc9eTIP6qBPUOp8twfL7ZkvZn3r5N/view?usp=sharing",
-                3.25,
+                "https://p.scdn.co/mp3-preview/1d5b03eeebb7195b4509bc3a51edfc997595b392?cid=2afe87a64b0042dabf51f37318616965",
+                3.84,
                 R.drawable.sorry_justin_bieber);
 
         Song Baby = new Song("S1003",
                 "Baby",
                 "Justin Bieber ft Ludacris",
-                "https://drive.google.com/file/d/1OkQzc9eTIP6qBPUOp8twfL7ZkvZn3r5N/view?usp=sharing",
-                3.39,
+                "https://p.scdn.co/mp3-preview/aad16063b2fb5104819fcb4c3917aa61245fd39b?cid=2afe87a64b0042dabf51f37318616965",
+                4.39,
                 R.drawable.baby_justin_bieber);
 
         Song Photograph = new Song("S1004",

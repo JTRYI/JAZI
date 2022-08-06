@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Library">
+
+    <TextView
+        android:id="@+id/txtArtist15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ed Sheeran"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle14"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle14" />
+
+    <TextView
+        android:id="@+id/txtTitle14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Shape of You"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1006"
+        app:layout_constraintTop_toTopOf="@+id/S1006" />
+
+    <ImageView
+        android:id="@+id/S1006"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1005"
+        app:srcCompat="@drawable/shape_of_you_ed_sheeran" />
+
+    <TextView
+        android:id="@+id/txtArtist14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ed Sheeran"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle13"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle13" />
+
+    <TextView
+        android:id="@+id/txtTitle13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Perfect"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1005"
+        app:layout_constraintTop_toTopOf="@+id/S1005" />
+
+    <ImageView
+        android:id="@+id/S1005"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1004"
+        app:srcCompat="@drawable/perfect_ed_sheeran" />
+
+    <TextView
+        android:id="@+id/txtArtist13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ed Sheeran"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle12"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle12" />
+
+    <TextView
+        android:id="@+id/txtTitle12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Photograph"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1004"
+        app:layout_constraintTop_toTopOf="@+id/S1004" />
+
+    <ImageView
+        android:id="@+id/S1004"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1003"
+        app:srcCompat="@drawable/photograph" />
+
+    <TextView
+        android:id="@+id/txtArtist12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Justin Bieber ft Ludacris"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle11"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle11" />
+
+    <TextView
+        android:id="@+id/txtTitle11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Baby"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1003"
+        app:layout_constraintTop_toTopOf="@+id/S1003" />
+
+    <ImageView
+        android:id="@+id/S1003"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1002"
+        app:srcCompat="@drawable/baby_justin_bieber" />
+
+    <TextView
+        android:id="@+id/txtArtist11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Justin Bieber"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle10"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle10" />
+
+    <TextView
+        android:id="@+id/txtTitle10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Sorry"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1002"
+        app:layout_constraintTop_toTopOf="@+id/S1002" />
+
+    <ImageView
+        android:id="@+id/S1002"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S1001"
+        app:srcCompat="@drawable/sorry_justin_bieber" />
+
+    <TextView
+        android:id="@+id/txtArtist10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Justin Bieber , The Kid LAROI"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="STAY"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/S1001"
+        app:layout_constraintTop_toTopOf="@+id/S1001" />
+
+    <ImageView
+        android:id="@+id/S1001"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:onClick="handleSelection"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/the_kid_laroi_justin_bieber_stay" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="6dp"
+        android:text="Library"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

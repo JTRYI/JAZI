@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgrammingPractiseWk5b">
         <activity
+            android:name=".Library"
+            android:exported="false" />
+        <activity
             android:name=".MyFavouritesPlaylist"
             android:exported="false" />
         <activity
