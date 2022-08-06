@@ -2,7 +2,6 @@ package com.example.programmingpractisewk5b;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +23,7 @@ public class JustinBieber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_justin_bieber);
+        // name "playList" is stored in phone
         sharedPreferences = getSharedPreferences("playList", MODE_PRIVATE);
         String albums = sharedPreferences.getString("list","");
         if (!albums.equals("")) {
@@ -40,7 +40,10 @@ public class JustinBieber extends AppCompatActivity {
         int selectedId = songCollection.searchSongById(songID);
         Song song = songCollection.returnSongById(selectedId);
         favList.add(song);
+        //for persistent playlist
         Gson gson = new Gson();
+        // use gson to convert whatever is inside favList to a string
+        //json contains string representation for favList
         String json = gson.toJson(favList);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("list",json);

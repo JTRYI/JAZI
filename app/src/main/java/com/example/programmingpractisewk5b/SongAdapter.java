@@ -3,6 +3,7 @@ package com.example.programmingpractisewk5b;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +40,10 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
     @NonNull
     @Override
     public MyView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        //handle for item song
         context = parent.getContext();
+
+        // codes to render item song
         LayoutInflater inflater = LayoutInflater.from(context);
         View songView = inflater.inflate(R.layout.item_song, parent, false);
         MyView viewHolder = new MyView(songView);
@@ -46,10 +52,10 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
 
 
     @Override
-    public void onBindViewHolder(@NonNull MyView holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(MyView holder, @SuppressLint("RecyclerView") int position) {
 
 
-        Song song = songs.get(position);
+        Song song = songsFiltered.get(position);
         TextView artist = holder.titleArtist;
         artist.setText(song.getArtist());
         TextView title = holder.titleTxt;
@@ -61,6 +67,7 @@ public class SongAdapter extends RecyclerView.Adapter<MyView> implements Filtera
             public void onClick(View view) {
                 JustinBieber.favList.remove(position);
                 notifyDataSetChanged();
+
             }
         });
 
